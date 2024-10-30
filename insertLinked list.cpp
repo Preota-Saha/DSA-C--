@@ -38,8 +38,9 @@ int main(){
      ptr=head;
      while(ptr->next !=NULL){
         ptr=ptr->next;
+
      }
-     ptr->next=a;*/
+     ptr->next=a;
 
      //at any point
      Node*ptr;
@@ -48,7 +49,9 @@ int main(){
         ptr=ptr->next;
      }
      a->next=ptr->next;
+     
      ptr->next=a;
+
 
         Tranversal(head);
 

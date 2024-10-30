@@ -8,7 +8,7 @@ class Node{
     Node (int val):data(val),next(NULL){}
 };
 
-void traverse(Node*n){
+void travers(Node*n){
     while(n != NULL){
         cout<<"Linked List= "<<n->data<<endl;
         n=n->next;
@@ -25,20 +25,17 @@ int main()
     second->next=third;
     third->next=NULL;
 
+    //create a new node
+    Node*addNode=new Node(2);
+    addNode->next=NULL;
+  
 
- //create a node
- Node *addNode=new Node(6);
- addNode->next=NULL;
-
- //insert at End
- Node*ptr=head;
- while(ptr->next != NULL){
-    ptr=ptr->next;
- }
- ptr->next=addNode;
-
+    //insert at first;
+    addNode->next=head;
+    head=addNode;
     
-     traverse(head);
+    travers(head);
+
 
  return 0;
 }
