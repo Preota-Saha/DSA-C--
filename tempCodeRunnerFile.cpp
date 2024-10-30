@@ -1,66 +1,40 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-class Node
-{
-public:
+class Node{
+    public:
     int data;
-    Node *next;
-    Node(int value) : data(value), next(NULL) {}
+    Node*next;
+
+    Node (int val):data(val),next(NULL){}
 };
-void Tranversal(Node *n){
+
+void travers(Node*n){
     while(n != NULL){
-        
-    cout<<"LINKED LIST= "<<n->data<<endl;
-    n = n->next;
+        cout<<"Linked List= "<<n->data<<endl;
+        n=n->next;
     }
-    }
-int main(){
-     
-    Node *head= new Node(3);
-    Node *second= new Node(2);
-    Node *third= new Node(7);
+}
+int main()
+{
 
-     //linked node
-     head->next= second;
-     second->next=third;
-     third->next=NULL;
+    Node*head=new Node(3);
+    Node*second=new Node(4);
+    Node*third=new Node(5);
 
-//create node
-     Node *a=new Node(5);
-     a->next=NULL;
+    head->next=second;
+    second->next=third;
+    third->next=NULL;
 
-     //insert at head
-       /* a->next = head;
-        head = a;*/
+    //create a new node
+    Node*addNode;
+    addNode->next=NULL;
 
-    //insert at end
-    Node*ptr;
-     ptr=head;
-     while(ptr->next !=NULL){
-        ptr=ptr->next;
-     }
-     ptr->next=a;
-
-     //at any point
-     InsertAfterNode(int data, int nodeData)
-    {
-     
+    //insert at first;
+    addNode->next=head;
+    head=addNode;
     
-     Node*ptr;
-     ptr=head;
-     while(ptr->data !=2){
-        ptr=ptr->next;
-     }
-     n->next=ptr->next;
-     ptr->next=a;
-
-        Tranversal(head);
-
-        return 0;
-    }
-     
-     
+    travers(head);
 
 
-
-    
+ return 0;
+}

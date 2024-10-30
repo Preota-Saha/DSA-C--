@@ -31,7 +31,7 @@ int main(){
 
      //insert at head
      a->next = head;
-        head = a;*/
+        head = a;
 
     //insert at end
     Node*ptr;
